@@ -1,0 +1,81 @@
+default: &default
+  url_azul: https://pagos.azul.com.do/PaymentPage/ # url to send the transation
+
+  # It's very necessary
+
+  auth_key: 'YOUR AUTH KEY HERE' # authentication key
+
+  merchant_id: 'YOUR MERCHANT ID HERE'
+  merchant_type: 'YOUR MERCHANT TYPE HERE'
+  merchant_name: 'YOUR MERCHANT NAME HERE'
+
+  # Url's transation
+  approved_url: 'YOUR URL HERE' # If the transation was approved
+  declined_url: 'YOUR URL HERE' # If the transation was declined
+  cancel_url: 'YOUR URL HERE' # If the transation was cancelled
+
+  response_post_url: 'YOUR URL HERE' # Optional. Url where will send response parameters
+
+  # Optionals
+  custom_field_1: 0
+  custom_field_1_label: ''
+  custom_field_1_value: ''
+
+  custom_field_2: 0
+  custom_field_2_label: ''
+  custom_field_2_value: ''
+
+development:
+  url_azul: https://pruebas.azul.com.do/PaymentPage/ # url to send the transation
+
+  # It's very necessary
+  auth_key: 'YOUR AUTH KEY HERE' # authentication key
+
+  merchant_id: 'YOUR MERCHANT ID HERE'
+  merchant_type: 'YOUR MERCHANT TYPE HERE'
+  merchant_name: 'YOUR MERCHANT NAME HERE'
+
+  # Url's transation
+  approved_url: 'YOUR URL HERE' # If the transation was approved
+  declined_url: 'YOUR URL HERE' # If the transation was declined
+  cancel_url: 'YOUR URL HERE' # If the transation was cancelled
+
+  response_post_url: 'YOUR URL HERE' # Optional. Url where will send response parameters
+
+  # Optionals
+  custom_field_1: 0
+  custom_field_1_label: ''
+  custom_field_1_value: ''
+
+  custom_field_2: 0
+  custom_field_2_label: ''
+  custom_field_2_value: ''
+
+test:
+  url_azul: https://pruebas.azul.com.do/PaymentPage/ # url to send the transation
+
+  # It's very necessary
+  auth_key: 'YOUR AUTH KEY HERE' # authentication key
+
+  merchant_id: 'YOUR MERCHANT ID HERE'
+  merchant_type: 'YOUR MERCHANT TYPE HERE'
+  merchant_name: 'YOUR MERCHANT NAME HERE'
+
+  # Url's transation
+  approved_url: 'YOUR URL HERE' # If the transation was approved
+  declined_url: 'YOUR URL HERE' # If the transation was declined
+  cancel_url: 'YOUR URL HERE' # If the transation was cancelled
+
+  response_post_url: 'YOUR URL HERE' # Optional. Url where will send response parameters
+
+  # Optionals
+  custom_field_1: 0
+  custom_field_1_label: ''
+  custom_field_1_value: ''
+
+  custom_field_2: 0
+  custom_field_2_label: ''
+  custom_field_2_value: ''
+  
+production:
+  <<: *default
