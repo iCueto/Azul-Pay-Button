@@ -7,7 +7,7 @@ This is a simple gem to integrate Azul Payment Page in your Ruby on Rails app.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'azul_pay_button'
+gem "azul_pay_button", :git => "git://github.com/iCueto/Azul-Pay-Button.git"
 ```
 
 And then execute:
