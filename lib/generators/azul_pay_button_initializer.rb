@@ -20,7 +20,6 @@ AzulPayButton.configure do |config|
   config.response_post_url = CONFIG['response_post_url'] # Optional. Url where will send response parameters
 
   # Optionals
-
   config.custom_field_1 = CONFIG['custom_field_1']
   config.custom_field_1_label = CONFIG['custom_field_1_label']
   config.custom_field_1_value = CONFIG['custom_field_1_value']
