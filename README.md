@@ -1,8 +1,6 @@
 # AzulPayButton
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/azul_pay_button`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a simple gem to integrate Azul Payment Page in your Ruby on Rails app.
 
 ## Installation
 
@@ -22,7 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+run in the terminal:
+
+    $ rails g azul
+
+Edit the config file in /config/azul_config.yml
+
+and use this snippet in your view:
+
+```ruby
+<%= azul_pay_button(order_number, currency, amount, itbis) %>
+```
+Where:
+
+* order_number: is the order number of your transation.
+
+* currency: must be "$" to indicate DOP or "US$" to indicate Dollars. Others currency not work.
+
+* amount: is the price of your products, this value is add up to the itbis
+
+* itbis: this value not must be in percentage, must be in decimals or number.
+
+And enjoy it!! 😎
 
 ## Development
 
@@ -38,4 +57,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
