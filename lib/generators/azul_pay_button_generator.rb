@@ -1,4 +1,4 @@
-class AzulGenerator < Rails::Generators::Base
+class AzulPayButtonGenerator < Rails::Generators::Base
   source_root(File.expand_path(File.dirname(__FILE__)))
 
   def copy_initializer_file
