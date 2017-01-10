@@ -14,15 +14,11 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install azul_pay_button
-
 ## Usage
 
 run in the terminal:
 
-    $ rails g azul
+    $ rails g azul_pay_button
 
 Edit the config file in /config/azul_config.yml
 
