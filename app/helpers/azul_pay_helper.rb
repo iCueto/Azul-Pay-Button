@@ -28,7 +28,7 @@ module AzulPayHelper
       <input type=\"hidden\" id=\"CustomField2Value\" name=\"CustomField2Value\" value=\"#{AzulPayButton.config.custom_field_2_value}\" >
       <input type=\"hidden\" id=\"AuthHash\" name=\"AuthHash\" value=\"#{Digest::SHA512.hexdigest auth_hash }\" >
       <input type=\"submit\" value=\"Pay with Azul Payment Page\">
-    </form>"
+    </form>".raw
 
   end
 end
