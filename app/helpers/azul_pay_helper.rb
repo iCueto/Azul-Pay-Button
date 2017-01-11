@@ -5,7 +5,7 @@ module AzulPayHelper
   def azul_pay_button(order_number, currency, amount, itbis)
     amount = amount + itbis
 
-    auth_hash =  AzulPayButton.config.merchant_id + AzulPayButton.config.merchant_name + AzulPayButton.config.merchant_type + currency +  order_number + amount + AzulPayButton.config.approved_url + AzulPayButton.config.declined_url + AzulPayButton.config.cancel_url + AzulPayButton.config.response_post_url + AzulPayButton.config.custom_field_1 + AzulPayButton.config.custom_field_1_label + AzulPayButton.config.custom_field_1_value + AzulPayButton.config.custom_field_2 + AzulPayButton.config.custom_field_2_label + AzulPayButton.config.custom_field_2_value + AzulPayButton.config.auth_key
+    auth_hash =  "#{AzulPayButton.config.merchant_id}#{AzulPayButton.config.merchant_name}#{AzulPayButton.config.merchant_type}#{currency}#{order_number}#{amount}#{AzulPayButton.config.approved_url}#{AzulPayButton.config.declined_url}#{AzulPayButton.config.cancel_url}#{AzulPayButton.config.response_post_url}#{AzulPayButton.config.custom_field_1}#{AzulPayButton.config.custom_field_1_label}#{AzulPayButton.config.custom_field_1_value}#{AzulPayButton.config.custom_field_2}#{AzulPayButton.config.custom_field_2_label}#{AzulPayButton.config.custom_field_2_value}#{AzulPayButton.config.auth_key}"
 
     #form for Pay
     "<form action=\"#{AzulPayButton.config.url_azul}\" method=\"post\">
