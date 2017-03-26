@@ -3,7 +3,11 @@ require 'digest'
 module AzulPayHelper
 
   def azul_pay_button(order_number, currency, amount, itbis)
-    amount = amount + itbis
+
+    itbis = '%.2f' % itbis.to_f.round(2)
+    amount = '%.2f' % amount.to_f.round(2)
+
+    amount = '%.2f' %  (amount.to_f + itbis.to_f).round(2)
 
     auth_hash =  "#{AzulPayButton.config.merchant_id}#{AzulPayButton.config.merchant_name}#{AzulPayButton.config.merchant_type}#{currency}#{order_number}#{amount}#{AzulPayButton.config.approved_url}#{AzulPayButton.config.declined_url}#{AzulPayButton.config.cancel_url}#{AzulPayButton.config.response_post_url}#{AzulPayButton.config.custom_field_1}#{AzulPayButton.config.custom_field_1_label}#{AzulPayButton.config.custom_field_1_value}#{AzulPayButton.config.custom_field_2}#{AzulPayButton.config.custom_field_2_label}#{AzulPayButton.config.custom_field_2_value}#{AzulPayButton.config.auth_key}"
 
@@ -13,9 +17,9 @@ module AzulPayHelper
       <input type=\"hidden\" id=\"MerchantName\" name=\"MerchantName\" value=\"#{AzulPayButton.config.merchant_name}\" >
       <input type=\"hidden\" id=\"MerchantType\" name=\"MerchantType\" value=\"#{AzulPayButton.config.merchant_type}\" >
       <input type=\"hidden\" id=\"CurrencyCode\" name=\"CurrencyCode\" value=\"#{currency}\" >
-      <input type=\"hidden\" id=\"itbis\" name=\"itbis\" value=\"#{itbis}\" >
+      <input type=\"hidden\" id=\"itbis\" name=\"itbis\" value=\"#{itbis.split('.').join}\" >
       <input type=\"hidden\" id=\"OrderNumber\" name=\"OrderNumber\" value=\"#{order_number}\" >
-      <input type=\"hidden\" id=\"Amount\" name=\"Amount\" value=\"#{amount}\" >
+      <input type=\"hidden\" id=\"Amount\" name=\"Amount\" value=\"#{amount.split('.').join}\" >
       <input type=\"hidden\" id=\"ApprovedUrl\" name=\"ApprovedUrl\" value=\"#{AzulPayButton.config.approved_url}\" >
       <input type=\"hidden\" id=\"DeclinedUrl\" name=\"DeclinedUrl\" value=\"#{AzulPayButton.config.declined_url}\" >
       <input type=\"hidden\" id=\"CancelUrl\" name=\"CancelUrl\" value=\"#{AzulPayButton.config.cancel_url}\" >
